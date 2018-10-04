@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import Formulario from './components/Formulario';
 
 import './css/App.css';
 
@@ -8,7 +9,7 @@ class App extends Component {
   token = 'I6SI2ETPDSJGLYQXX4JH';
 
   state = {
-    categorias: []
+    categoria: []
   }
 
   componentDidMount() {
@@ -33,6 +34,13 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
+        
+        <div className="uk-container">
+            <Formulario 
+              categorias={this.state.categorias}
+            />
+        </div>
+ 
       </div>
     );
   }
