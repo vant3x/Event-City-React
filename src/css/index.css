@@ -12,7 +12,7 @@ body {
 header {
   background-color: #ec3a49;
   color: white;
-  padding: 0px 0px 3rem 0;
+  padding: 0px 0px 2.2rem 0;
 }
 h1, .title {
   color: white;
@@ -27,9 +27,10 @@ h1, .title {
 .header-img {
   width: 100%;
   height: 400px;
-  background: url(https://images.pexels.com/photos/12574/SW_Dylan%2BRives.jpg);
+  /* https://images.pexels.com/photos/12574/SW_Dylan%2BRives.jpg?auto=compress&cs=tinysrgb&h=750&w=1260*/
+  background: url(https://images.pexels.com/photos/1179581/pexels-photo-1179581.jpeg);
   background-size: 100%;
-  background-position: bottom;
-  margin:  0px 0px 60px 0;
+  background-position: center;
+  margin:  0px 0px 50px 0;
   background-repeat: no-repeat;
 }

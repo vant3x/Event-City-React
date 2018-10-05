@@ -9,7 +9,7 @@ class App extends Component {
   token = 'I6SI2ETPDSJGLYQXX4JH';
 
   state = {
-    categoria: []
+    categorias: []
   }
 
   componentDidMount() {
