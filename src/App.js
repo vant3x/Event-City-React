@@ -30,6 +30,10 @@ class App extends Component {
       })
   }
 
+  obtenerEventos = async (busqueda) => {
+    console.log(busqueda);
+  }
+
   render() {
     return (
       <div className="App">
@@ -38,6 +42,7 @@ class App extends Component {
         <div className="uk-container">
             <Formulario 
               categorias={this.state.categorias}
+              obtenerEventos={this.obtenerEventos}
             />
         </div>
  

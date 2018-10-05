@@ -1,6 +1,26 @@
 import React, {Component} from 'react';
+import { log } from 'util';
 
 class Formulario extends Component {
+
+  nombreEventoRef = React.createRef();
+  categoriaRef = React.createRef();
+
+
+  buscarEvento = (e) => {
+    e.preventDefault();
+  
+    // crear el objeto 
+    const datosBusqueda = {
+      nombre: this.nombreEventoRef.current.value,
+      categoria: this.categoriaRef.current.value
+    }
+
+    // pasarlo por props
+
+    this.props.obtenerEventos(datosBusqueda);
+
+  }
 
   mostrarOpciones = (key) => {
     const categoria = this.props.categorias[key];
@@ -20,7 +40,7 @@ class Formulario extends Component {
     const categorias = Object.keys(this.props.categorias);
 
     return (
-      <form>
+      <form onSubmit={this.buscarEvento}>
         <fieldset className="uk-fieldset uk-margin">
           <legend className="uk-legend uk-text-center">
             Busca tu evento por nombre o categoría
@@ -28,12 +48,13 @@ class Formulario extends Component {
           <div className="uk-column-1-3@m uk-margin"> 
             <div className="uk-margin" uk-margin="true">
               <input className="uk-input" 
+                ref={this.nombreEventoRef}
                 type="text" 
                 placeholder="Nombre de evento o ciudad" />
             </div>
 
             <div className="uk-margin" uk-margin="true">
-              <select className="uk-select">
+              <select ref={this.categoriaRef} className="uk-select">
                 {categorias.map(this.mostrarOpciones)}
               </select>
             </div>	
