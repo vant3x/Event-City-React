@@ -7,6 +7,7 @@ class Eventos extends React.Component {
       <div className="uk-child-width-1-4@m" uk-grid="true">
         { Object.keys(this.props.eventos).map(key => (
           <Evento
+            key={key}
             info={this.props.eventos[key]}
           />
         ))}

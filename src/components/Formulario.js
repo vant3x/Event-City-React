@@ -1,25 +1,19 @@
 import React, {Component} from 'react';
-import { log } from 'util';
 
 class Formulario extends Component {
 
   nombreEventoRef = React.createRef();
   categoriaRef = React.createRef();
 
-
   buscarEvento = (e) => {
     e.preventDefault();
-  
     // crear el objeto 
     const datosBusqueda = {
       nombre: this.nombreEventoRef.current.value,
       categoria: this.categoriaRef.current.value
     }
-
     // pasarlo por props
-
     this.props.obtenerEventos(datosBusqueda);
-
   }
 
   mostrarOpciones = (key) => {
