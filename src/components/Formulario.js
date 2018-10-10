@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class Formulario extends Component {
 
@@ -64,5 +65,9 @@ class Formulario extends Component {
   };
 };
 
+Formulario.propTypes = {
+  obtenerEventos : PropTypes.func.isRequired,
+  categorias : PropTypes.array.isRequired
+}
 
 export default Formulario;

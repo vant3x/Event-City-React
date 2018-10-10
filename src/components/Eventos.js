@@ -1,5 +1,6 @@
 import React from 'react';
 import Evento from './Evento';
+import PropTypes from 'prop-types';
 
 class Eventos extends React.Component {
   render() {
@@ -15,5 +16,9 @@ class Eventos extends React.Component {
     );
   };
 };
+
+Eventos.propTypes = {
+  eventos: PropTypes.array.isRequired
+}
 
 export default Eventos;
